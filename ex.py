@@ -11,4 +11,9 @@ Read_html=Url_html.read()
 List_re=re.findall("[http://www.ex.ua/show/0-9abcdef0-9]+.flv", Read_html)
 
 for i in List_re:
-	os.system('wget %s' %i)
+	#os.system('wget %s' %i)
+	print i
+#~ List_reII=re.findall("[\[A-D\] | 0-9].+mp4", Read_html)
+#~ 
+#~ for ii in List_reII:
+	#~ print ii
