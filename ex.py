@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-#A="[a-z:/[a-z./[0-9/[abcdef0-9]+.flv"
-#B=re.compile(A)
-#C=re.findall(
 import urllib, urllib2, re, sys, os
 html = 'http://www.ex.ua/21522453?r=23786'
 Url_html=urllib.urlopen(html)
@@ -13,10 +10,14 @@ List_re=re.findall("[http://www.ex.ua/show/0-9abcdef0-9]+.flv", Read_html)
 for i in List_re:
 	#os.system('wget %s' %i)
 	print i
+
 Xran=range(len(List_re)+1); Xran.pop(0)
 for r in Xran:
+	r=str(r)
 	print r
 
+#~ Я зделал то!!
+print re.search('(?<=<title>).*(?=\s/)', Read_html).group()
 
 
 
