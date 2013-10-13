@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import urllib, urllib2, re, sys, os
+
 html = 'http://www.ex.ua/21522453?r=23786'
 Url_html=urllib.urlopen(html)
 Read_html=Url_html.read()
