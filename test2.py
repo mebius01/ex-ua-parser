@@ -6,8 +6,8 @@ Url_html=urllib.urlopen(html)
 Read_html=Url_html.read()
 
 #~ Парсим
-List_re=re.findall("[http://www.ex.ua/show/0-9abcdef0-9]+.flv", Read_html) # Парсим url для flv
-List_re_dir=re.findall("[0-9a-z]+.flv", Read_html) #шаблон имен файлов 
+List_re=re.findall("[http://www.ex.ua/show/0-9abcdef0-9]+.flv", Read_html)
+List_re_dir=re.findall("[0-9a-z]+.flv", Read_html) 
 Title_re=re.search('(?<=<title>).*?(?=\/)', Read_html).group()
 
 os.mkdir(Title_re)
@@ -28,7 +28,7 @@ def PopListTitle(lis):
 	elif len(lis) ==0:
 		print 'list пуст!!!!!!'
 
-ForTitle() # Обязательно вызвать
+ForTitle()
 
 def FunWget(who):
 	var_who=who.pop(0)
